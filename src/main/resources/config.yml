@@ -1,0 +1,11 @@
+arrow-pickup:
+  enabled: true
+
+blood:
+  enabled: true
+
+door-knock:
+  enabled: true
+
+snow-layer-remover:
+  enabled: true
