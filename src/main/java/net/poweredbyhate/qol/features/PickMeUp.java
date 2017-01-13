@@ -1,4 +1,4 @@
-package net.poweredbyhate.qol;
+package net.poweredbyhate.qol.features;
 
 import net.minecraft.server.v1_11_R1.EntityArrow;
 import org.bukkit.craftbukkit.v1_11_R1.entity.CraftArrow;

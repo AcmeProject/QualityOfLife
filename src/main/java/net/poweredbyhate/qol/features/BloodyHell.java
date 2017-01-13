@@ -1,4 +1,4 @@
-package net.poweredbyhate.qol;
+package net.poweredbyhate.qol.features;
 
 import org.bukkit.Effect;
 import org.bukkit.Material;

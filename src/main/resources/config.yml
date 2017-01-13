@@ -9,3 +9,7 @@ door-knock:
 
 snow-layer-remover:
   enabled: true
+
+boiling-cauldrons:
+  enabled: true
+  type: 'WATER_SPLASH'

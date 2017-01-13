@@ -1,5 +1,10 @@
 package net.poweredbyhate.qol;
 
+import net.poweredbyhate.qol.features.BloodyHell;
+import net.poweredbyhate.qol.features.KnockKnockListener;
+import net.poweredbyhate.qol.features.LetItSnow;
+import net.poweredbyhate.qol.features.PickMeUp;
+import net.poweredbyhate.qol.features.WitchHunts;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -8,7 +13,11 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class QualityOfLife extends JavaPlugin {
 
+    public static QualityOfLife instance;
+
     public void onEnable() {
+        instance = this;
+        saveDefaultConfig();
         if (getConfig().getBoolean("door-knock.enabled")) {
             Bukkit.getPluginManager().registerEvents(new KnockKnockListener(), this);
         }
@@ -20,6 +29,9 @@ public class QualityOfLife extends JavaPlugin {
         }
         if (getConfig().getBoolean("snow-layer-remover.enabled")) {
             Bukkit.getPluginManager().registerEvents(new LetItSnow(), this);
+        }
+        if (getConfig().getBoolean("boiling-cauldrons.enabled")) {
+            Bukkit.getPluginManager().registerEvents(new WitchHunts(), this);
         }
         //System.out.println("Version: " + Bukkit.getServer().getClass().getPackage().getName().replace(".", ",").split(",")[3]);
     }
